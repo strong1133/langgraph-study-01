@@ -1,0 +1,34 @@
+[project]
+name = "langgraph-study-01"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.3.14",
+    "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.3.5",
+    "langgraph>=1.2.9",
+    "python-dotenv>=1.2.2",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pyright]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "basic"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+    "pyright>=1.1.411",
+    "pytest>=9.1.1",
+    "ruff>=0.15.22",
+]
